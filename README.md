@@ -1,6 +1,12 @@
 ![turna](_assets/turna.svg#gh-light-mode-only)
 ![turna](_assets/turna_light.svg#gh-dark-mode-only)
 
+[![License](https://img.shields.io/github/license/worldline-go/turna?color=red&style=flat-square)](https://raw.githubusercontent.com/worldline-go/turna/main/LICENSE)
+[![Coverage](https://img.shields.io/sonar/coverage/worldline-go_turna?logo=sonarcloud&server=https%3A%2F%2Fsonarcloud.io&style=flat-square)](https://sonarcloud.io/summary/overall?id=worldline-go_turna)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/worldline-go/turna/Test?logo=github&style=flat-square&label=ci)](https://github.com/worldline-go/turna/actions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/worldline-go/turna?style=flat-square)](https://goreportcard.com/report/github.com/worldline-go/turna)
+[![Web](https://img.shields.io/badge/web-document-blueviolet?style=flat-square)](https://worldline-go.github.io/turna/)
+
 Turna gets configuration files from various sources and runs commands.
 
 With _turna_, we can use third party programs directly in our systems without giving extra configuration files to them.
@@ -47,6 +53,58 @@ loads:
           path: load.yml
           # default is 0 and file third to merge of statics
           order: 3
+
+server:
+  entrypoints:
+    web:
+      address: 0.0.0.0:3000
+  http:
+    middlewares:
+      myauth:
+        auth:
+          basic:
+            username: admin
+            password: admin
+          # oauth2:
+          #   client_id: client_id
+          #   client_secret: client_secret
+          #   auth_url: https://auth.example.com/oauth2/auth
+          #   token_url: https://auth.example.com/oauth2/token
+          #   scopes:
+          #     - openid
+          #     - profile
+          #     - email
+          #   user_url: https://auth.example.com/userinfo
+    services:
+    - routes:
+        rule: PathPrefix(`/products/`)
+        entrypoints:
+        - web
+        middlewares:
+        - myauth
+      # share folder to serve files
+      folders:
+      - redirect: /static
+        # folder location
+        path: static
+        # default is length of redirect
+        priority: 2
+        middlewares:
+        - myauth
+      - redirect: /templates
+        # folder location
+        path: templates
+        # default is length of redirect
+        priority: 3
+        middlewares:
+        - myauth
+      redirect:
+        path: "/"
+        to: "http://localhost:8080"
+        # default is length of path
+        priority: 1
+        middlewares:
+        - myauth
 
 # declare commands to run
 services:

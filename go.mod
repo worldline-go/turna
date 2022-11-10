@@ -10,6 +10,7 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/worldline-go/igconfig v0.1.3
 	github.com/worldline-go/logz v0.2.1
+	golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -19,6 +20,7 @@ require (
 	github.com/Masterminds/semver/v3 v3.1.1 // indirect
 	github.com/armon/go-metrics v0.3.4 // indirect
 	github.com/fatih/color v1.10.0 // indirect
+	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/golang/snappy v0.0.2 // indirect
 	github.com/google/uuid v1.1.1 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
@@ -53,5 +55,6 @@ require (
 	golang.org/x/sys v0.0.0-20220704084225-05e143d24a9e // indirect
 	golang.org/x/text v0.3.6 // indirect
 	golang.org/x/time v0.0.0-20200630173020-3af7569d3a1e // indirect
+	google.golang.org/appengine v1.1.0 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
 )

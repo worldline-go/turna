@@ -1,2 +1,5 @@
 /test.yml
 /dist
+/*.out
+/.golangci.yml
+/bin
