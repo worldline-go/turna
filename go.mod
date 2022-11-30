@@ -9,7 +9,7 @@ require (
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/pflag v1.0.5
 	github.com/worldline-go/igconfig v0.1.3
-	github.com/worldline-go/logz v0.2.1
+	github.com/worldline-go/logz v0.3.0
 	golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be
 	gopkg.in/yaml.v3 v3.0.1
 )

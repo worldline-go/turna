@@ -243,8 +243,8 @@ github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5Cc
 github.com/tv42/httpunix v0.0.0-20150427012821-b75d8614f926/go.mod h1:9ESjWnEqriFuLhtthL60Sar/7RFoluCcXsuvEwTV5KM=
 github.com/worldline-go/igconfig v0.1.3 h1:BjfacOmF3Fv/12lB1yGJsa4mrbWp2DIUuNuEuhpWSMw=
 github.com/worldline-go/igconfig v0.1.3/go.mod h1:V0F8o4UUR+hR+Z0LKTCN5BXOShf1WeeIL71JlWng99E=
-github.com/worldline-go/logz v0.2.1 h1:4VBPZumqJ2BaBpQSfAwP5bB54F2BTxF9F2+aSrs2uYY=
-github.com/worldline-go/logz v0.2.1/go.mod h1:CT9jFCJUR8uNYZacUDV+VaNQWdxQLQ9g2UayR4QmMzg=
+github.com/worldline-go/logz v0.3.0 h1:nDmc8ZpoRlLKPephpSwxW5Az7G/yqzHkpHhEli+bLK4=
+github.com/worldline-go/logz v0.3.0/go.mod h1:CT9jFCJUR8uNYZacUDV+VaNQWdxQLQ9g2UayR4QmMzg=
 github.com/worldline-go/reformat v1.1.0 h1:Uy1jY0V2rI+cy7Zr/9qMBG6/zJVQ1VpTWqA38hafl9U=
 github.com/worldline-go/reformat v1.1.0/go.mod h1:FVdixVS0WKg7YlpFusaWESCcwGOorBwdSnao6EOJISU=
 golang.org/x/crypto v0.0.0-20180904163835-0709b304e793/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=

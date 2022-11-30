@@ -75,36 +75,25 @@ server:
           #     - profile
           #     - email
           #   user_url: https://auth.example.com/userinfo
-    services:
-    - routes:
-        rule: PathPrefix(`/products/`)
-        entrypoints:
-        - web
-        middlewares:
-        - myauth
-      # share folder to serve files
-      folders:
-      - redirect: /static
+    # share folder to serve files
+    folders:
+      - name: myfolder
         # folder location
         path: static
-        # default is length of redirect
-        priority: 2
         middlewares:
-        - myauth
-      - redirect: /templates
-        # folder location
-        path: templates
-        # default is length of redirect
-        priority: 3
-        middlewares:
-        - myauth
-      redirect:
-        path: "/"
-        to: "http://localhost:8080"
-        # default is length of path
+          - myauth
+    redirects:
+      - rule: PathPrefix(`/products/`)
+        # default priority is length of the rule
         priority: 1
+        to:
+          # use url or folder
+          url: https://example.com/products/
+          folder: myfolder
+        entrypoints:
+          - web
         middlewares:
-        - myauth
+          - myauth
 
 # declare commands to run
 services:

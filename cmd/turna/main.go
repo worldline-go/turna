@@ -11,15 +11,15 @@ import (
 	"github.com/worldline-go/turna/cmd/turna/args"
 )
 
+// populated on build step
 var (
-	// populated on build step
 	version = "v0.0.0"
 	commit  = "?"
 	date    = ""
 )
 
 func main() {
-	logz.InitializeLog(nil)
+	logz.InitializeLog(logz.WithCaller(false))
 
 	args.BuildVars.Version = version
 	args.BuildVars.Date = date
